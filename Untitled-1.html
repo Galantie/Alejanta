@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+      <meta charset='utf-8'>
+      <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+      <title>Meu primeiro formulário</title>
+      <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+      <style>
+            body {
+                  font-family: Arial, Helvetica, sans-serif;
+                  background-image: linear-gradient(to right,  rgba(29, 55, 199, 0.671) , #171ad8a4, #2902d6);
+                  width: 100%;
+            }
+
+            .box1 {
+                  top: 50%;
+                  left: 50%;
+                  transform: translate(-50%, -50%);
+                  position: absolute;
+                  padding: 15px;
+                  background-color: rgba(35, 56, 179, 0.507);
+                  border-radius: 10px;
+                  box-shadow: 6px 5px 5px rgba(0, 0, 0, 0.247);
+            }
+
+            fieldset {
+                  border-radius: 10px;
+                  border: #0bfae6  double 6px;
+                  padding: 20px;
+
+
+                  
+            }
+            legend{ 
+                  border-bottom: #0bfae6  solid 3px;
+                  text-align: left;
+                  padding: 7px;
+                  background-color: #2902d6;
+                  border-radius: 7px;
+                  color:#7fa4eb
+            }
+
+            .box{ position: relative;}
+
+            .nomeuser{  
+                       border: none;
+                       border-bottom: #0bfae6 solid 2px;
+                       outline: none;
+                       color: #1c55f1, #2902d6;
+                       font-size: 15px;
+                       width: 100%;
+                       text-align: center;
+                       letter-spacing: 1px;
+                  
+                  
+             }
+             .label{
+                   position:relative;
+                   top:0px;
+                   left:0px;
+                   pointer-events: none;
+                   transition: .1s;
+             
+
+             }
+             .nomeuser:focus ~.label , .nomeuser:valid ~ .label {
+                  top: -3px;
+                  font-size: 12px;
+                  color: #7fa4eb
+             }
+             #data-nascimento{
+                  border: none;
+                  border-radius: 10px;
+                  padding: 10px; 
+                  outline: none;
+                  font-size: 17px;
+                  background-color: #7fa4eb;
+                  color:rgb(192, 205, 221);
+             }
+             #submit{ background-image: linear-gradient(to right, #171ad8, #2902d6);
+                        width:100%;
+                        border: none;
+                        border-radius:5px;
+                        padding: 10px;
+                        color:#0bfae6;
+                        font-size: medium;
+                        cursor: pointer;
+                        box-shadow: 6px 5px 5px rgba(0, 0, 0, 0.247);
+             } 
+                    
+             #submit:hover { color: rgb(0, 162, 255);
+            background: #2902d685;
+            /* box-shadow: none; */
+            }
+              
+      </style>
+</head>
+
+<body>
+
+      <div class="box1">
+            <form action=""  form autocomplete="off">
+                  <fieldset>
+                        <legend> <b>Meu formulário</b> </legend>
+                        <br>
+
+                        <div class="box"> <br>
+                              <input type="text" nome="nome" class="nomeuser" id="nome" required>
+                              <label for="nome" class="label"> <b>Nome completo</b></label>
+                        </div>
+
+                        <div class="box"> <br>
+                              <input type="text" nome="email" class="nomeuser" id="email" required>
+                              <label for="email" class="label"> <b>Email</b>  </label>
+                        </div>
+
+                        <div class="box"> <br>
+                              <input type="tel" nome="telefone" class="nomeuser" id="telefone" required>
+                              <label for="Telefone" class="label"> <b>Telefone</b></label>
+                        </div>
+                        <br>
+                        <p> <b>Sexo</b> </p>
+                        <input type="radio" name="gereno" value="feminino" id="feminino" required>
+                        <label for="feminino">Feminino</label> <br>
+
+                        <input type="radio" name="gereno" value="masculino" id="masculino" required>
+                        <label for="masculino">Masculino</label> <br>
+
+                        <input type="radio" name="gereno" value="Outro" id="outro" required>
+                        <label for="outro"> Outro</label><br>
+
+                        
+                              <br>
+                              <label for="outro" class="label"> <b>Data de nascimento</b></label> 
+                              <input type="date" name="data-nascimento"  value="" id="data-nascimento" required>
+            
+
+                        <div class="box"> <br>
+                              <input type="text" name="cidade" class="nomeuser" value="" id="cidade" required>
+                              <label for="cidade" class="label"> <b>Cidade</b></label>
+                        </div>
+
+                        <div class="box"> <br>
+                              <input type="text" name="estado" class="nomeuser" value="" id="estado" required>
+                              <label for="estado" class="label"><b>Estado</b></label>
+                        </div>
+
+                        <div class="box"> <br>
+                              <input type="text" name="endereco" class="nomeuser" value="" id="endereco" required>
+                              <label for="endereco" class="label">  <b>Endereço</b></label CO>
+                        </div>
+                        <br>
+                        <input type="submit"  name="Submit" id="submit" >
+
+
+
+                  </fieldset>
+
+
+            </form>
+      </div>
+
+</body>
+
+</html>
